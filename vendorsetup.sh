@@ -1,3 +1,3 @@
-add_lunch_combo lineage_S8_pro1-userdebug
-add_lunch_combo lineage_S8_pro1-user
-add_lunch_combo lineage_S8_pro1-eng
+add_lunch_combo omni_S8_pro1-userdebug
+add_lunch_combo omni_S8_pro1-user
+add_lunch_combo omni_S8_pro1-eng
