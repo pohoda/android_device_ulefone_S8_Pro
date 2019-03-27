@@ -1,4 +1,4 @@
-LOCAL_PATH := device/ulefone/S8_pro1
+LOCAL_PATH := device/ulefone/S8_Pro
 
 # type (yes if MTK - no if other)
 MEDIATEK_TYPE := yes

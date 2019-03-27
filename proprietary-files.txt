@@ -1,5 +1,5 @@
 ## prikaz :
-## awk -F 'vendor/Ulefone/S8_pro1/proprietary/' '{ print $2 }' /home/el/BUILD-omni/device/ulefone/S8_pro1/S8_pro1-vendor-blobs.mk | awk -F: '{ print $1 }' > /home/el/BUILD-omni/device/ulefone/S8_pro1/proprietary-files.txt 
+## awk -F 'vendor/Ulefone/S8_Pro/proprietary/' '{ print $2 }' /home/el/BUILD-omni/device/ulefone/S8_Pro/S8_Pro-vendor-blobs.mk | awk -F: '{ print $1 }' > /home/el/BUILD-omni/device/ulefone/S8_Pro/proprietary-files.txt 
 
 vendor/lib64/mtk-ril.so
 vendor/lib64/librilmtk.so

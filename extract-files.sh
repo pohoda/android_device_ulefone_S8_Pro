@@ -19,7 +19,7 @@
 set -e
 
 DEVICE=ulefone
-VENDOR=S8_pro1
+VENDOR=S8_Pro
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
