@@ -50,7 +50,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE :=	1610612736
 BOARD_PROTECT1IMAGE_PARTITION_SIZE :=	10485760
 BOARD_PROTECT2IMAGE_PARTITION_SIZE :=	10485760
 BOARD_KERNEL_CMDLINE := 'bootopt=64S3,32N2,64N2'
-BOARD_KERNEL_PAGESIZE := 2048	
+BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_RAMDISK_OFFSET := 0x03f88000
 BOARD_TAGS_OFFSET := 0x0df88000
@@ -84,11 +84,12 @@ PRODUCT_COPY_FILES += $(LOCAL_PATH)/fstab.mt6735:root/fstab.mt6735
 # TWRP recovery
 RECOVERY_VARIANT                          := twrp
 TW_DEFAULT_LANGUAGE						  := sk
+TW_EXTRA_LANGUAGES						  := true
 PRODUCT_COPY_FILES += $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
 HAVE_LIBSELINUX                           := true
 TW_INCLUDE_CRYPTO                         := true
-TW_NO_USB_STORAGE                         := false
-RECOVERY_GRAPHICS_USE_LINELENGTHn         := true
+#TW_NO_USB_STORAGE                         := false
+RECOVERY_GRAPHICS_USE_LINELENGTH          := true
 TW_USE_TOOLBOX                            := false
 RECOVERY_SDCARD_ON_DATA                   := true
 TW_THEME                                  := portrait_hdpi
@@ -96,7 +97,7 @@ TW_DEFAULT_EXTERNAL_STORAGE               := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_SECONDARY_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun0/file"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0/gadget/lun%d/file
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 BOARD_SUPPRESS_EMMC_WIPE := true
@@ -156,7 +157,7 @@ TW_TIME_ZONE_GUISEL 			  := CET-1
 TW_TIME_ZONE_GUIOFFSET 			  := 0
 TW_TIME_ZONE_GUIDST 			  := 1
 
-# For H24 hours 
+# For H24 hours
 TW_MILITARY_TIME                              := 1
 
 # For Screen_timeout_secs
@@ -165,7 +166,7 @@ TW_NO_SCREEN_TIMEOUT					  := true
 WITH_SU                                   := true
 TWRP_INCLUDE_LOGCAT                       := true
 TW_INCLUDE_FB2PN                          := true
-# BOARD_SUPPRESS_SECURE_ERASE               := true
-# BOARD_BML_BOOT 							  := "dev/block/bml8"
-# BOARD_BML_RECOVERY 						  := "dev/block/bml9"
-# BOARD_RECOVERY_DEFINES 					  := BOARD_BML_BOOT BOARD_BML_RECOVERY
+BOARD_SUPPRESS_SECURE_ERASE               := true
+BOARD_BML_BOOT 							  := "dev/block/bml8"
+BOARD_BML_RECOVERY 						  := "dev/block/bml9"
+BOARD_RECOVERY_DEFINES 					  := BOARD_BML_BOOT BOARD_BML_RECOVERY
