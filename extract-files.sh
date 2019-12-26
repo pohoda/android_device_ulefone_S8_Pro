@@ -56,7 +56,7 @@ if [ -z "$SRC" ]; then
 fi
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$OMNI_ROOT" false "$CLEAN_VENDOR"
+setup_vendor "$VENDOR" "$DEVICE" "$OMNI_ROOT" false "$CLEAN_VENDOR"
 
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
