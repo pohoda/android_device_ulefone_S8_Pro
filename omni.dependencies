@@ -1,0 +1,14 @@
+[
+  {
+    "remote": "omnirom",
+    "repository": "platform_device_generic_goldfish",
+    "target_path": "device/generic/goldfish",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_device_generic_goldfish-opengl"
+    "target_path": "device/generic/goldfish-opengl"
+    "revision": "android-9.0"
+  }.
+]
